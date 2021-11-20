@@ -1,6 +1,6 @@
 "use strict";
 
-const numberOfFilms = prompt('Сколько фильмов вы уже посмтотрели?', '');
+/* const numberOfFilms = prompt('Сколько фильмов вы уже посмтотрели?', '');
 
 const personalMovieDB = {
     count: numberOfFilms,
@@ -18,4 +18,37 @@ const a = prompt('Один из просмотренных фильмов?', '')
 personalMovieDB.movies[a] = b;
 personalMovieDB.movies[c] = d;
 
-console.log(personalMovieDB);
+console.log(personalMovieDB); */
+
+/* if (3 - 5 == 9) {
+    console.log('Ok');
+} else {
+    console.log('You eblan');
+}
+ */
+const num = 50;
+
+/* if (num < 49) {
+    console.log('Error');
+} else if (num > 100) {
+    console.log('Много');
+} else {
+    console.log("Ok!");
+}
+
+(num === 50) ? console.log('Ok') : console.log('Error'); */
+
+
+switch (num) {
+    case 49: 
+        console.log('No');
+        break;
+    case 100: 
+        console.log('No no');
+        break;
+    case 50:
+        console.log('Yes');
+        break;
+    default:
+        console.log('NO nono');
+}
