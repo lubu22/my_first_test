@@ -1,25 +1,68 @@
 "use strict";
 
-const str = "test";
-/* const arr = [1, 2, 3];
- */
-console.log(str.toUpperCase());
+let numberOfFilms;
 
-let fruit = 'Some fruit';
+function start() {
+    numberOfFilms = +prompt('Сколько фильмов вы уже посмтотрели?', '');
 
-console.log(fruit.indexOf('t'));
+    while (numberOfFilms == '' || numberOfFilms == null || isNaN(numberOfFilms)) {
+        numberOfFilms = +prompt('Сколько фильмов вы уже посмтотрели?', '');
 
-const logg = "hello world";
+    }
+}
 
-console.log(logg.slice(6));
+start();
 
-console.log(logg.substring(6, 10));
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genre: {},
+    privat: false
+};
 
-console.log(logg.substr(6, 5));
 
-const num = 12.2;
-console.log(Math.round(num));
+function rememberMyFilms() {
+    for (let i = 0; i < 2; i++) {
+const a = prompt('Один из просмотренных фильмов?', ''),
+        b = prompt('На сколько оцените его?', '');
 
-const test = '12.2px';
-console.log(parseInt(test));
-console.log(parseFloat(test));
+        if (a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+            personalMovieDB.movies[a] = b;
+            console.log('done');
+        } else {
+            console.log("error");
+            i--;
+        }
+    }
+}
+
+rememberMyFilms();
+
+function detectPersonalLevel () {
+    if (personalMovieDB.count < 10) {
+        console.log("Просмотрено мало фильмов");
+    } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
+        console.log("Вы классический зритель");
+    } else if (personalMovieDB.count >= 30) {
+        console.log("Вы посмотрели много фильмов");
+    } else {
+        console.log('Error');
+    }
+}
+detectPersonalLevel ();
+
+function showMyDB (hidden) {
+    if (!hidden) {
+        console.log(personalMovieDB);
+    }
+}
+showMyDB ();
+function writeYourGanres() {
+    for (let i = 1; i <= 3; i++) {
+        const genre = prompt(`Ваш любимый жанр под номером ${i}`);
+        personalMovieDB.genre[i - 1] = genre;
+    }
+}
+writeYourGanres();
+
