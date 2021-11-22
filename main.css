@@ -1,3 +1,73 @@
-h1 {
-    color: red;
+@font-face {
+    font-family: 'SegoeWPN';
+    src: url(fonts/SegoeWPN.ttf);
+}
+@font-face {
+    font-family: 'mrseavei';
+    src: url(fonts/MRSEAVEI.otf);
+}
+body {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style-type: none;
+}
+.header_bg {
+    background-image: url(image/header_bg_1.png);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.header .logo {
+    color: white;
+}
+.logo {
+    font-size: 118px;
+    font-family: mrseavei;
+    width: 45%;
+    padding-bottom: 0px;
+    opacity: 0.68;
+    margin: auto;
+}
+.header {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+.menu {
+    display: flex;
+    width: 65%;
+    text-align: center;
+}
+.menu li {
+    margin: auto 30px
+}
+.menu a {
+    color: #ffffff;
+    font-size: 22px;
+    font-family: SegoeWPN;
+    opacity: 0.68;
+}
+.slider {
+    display: flex;
+    justify-content: space-between;
+}
+.slider-main {
+    display: flex;
+    
+}
+.slider-main-img {
+    
+}
+.left-slider {
+    margin: auto 30px;
+    opacity: 0.22;
+}
+.right-slider {
+    margin: auto 30px;
+    opacity: 0.22;
 }
