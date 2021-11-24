@@ -1,25 +1,49 @@
 "use strict";
 
-let str = 'some';
-let strObj = new String(str);
+// to string
 
-console.log(typeof(str));
-console.log(typeof(strObj));
+//1)
+console.log(typeof(String(null)));
 
-/* console.dir([1,2,3]);
- */
-const solider = {
-    healt: 400,
-    armor: 100,
-    sayHello: function() {
-        console.log('Hello');
-    }
-};
+//2
+console.log(typeof(5 + ''));
 
-const john = Object.create(solider);
-/* john.__proto__ = solider;
- */
-/* Object.setPrototypeOf(john, solider);
- */
-/* console.log(john.armor); */
-john.sayHello();
+const num = 5;
+
+console.log('https://vk.com/catalog/' + num);
+
+const fontSize = 26 + 'px';
+
+//to numvber
+
+//1
+console.log(typeof(Number('4')));
+
+//2
+console.log(typeof(+"5"));
+
+//3
+console.log(typeof(parseInt('15px', 10)));
+
+let answ = +prompt('hello', '');
+
+//to boolean
+
+//0, '', null, undefined, NaN;
+//1
+let switcher = null;
+
+if (switcher) {
+    console.log('Working...');
+}
+
+switcher = 1;
+
+if (switcher) {
+    console.log('Working...');
+}
+
+//2
+console.log(typeof(Boolean('4')));
+//3
+console.log(typeof(!!'4444'));
