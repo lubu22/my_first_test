@@ -1,165 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie DB</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-<!--     <div class="header_bg">
-        <div class="header">
-        <a href="#" class="logo">Leo/-</a>
-        <ul class="menu">
-            <li><a href="#">Solutions</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
-    <div class="slider">
-        <div class="left-slider">
-            <a href="#"><img src="image/slider_button_left.png"/></a>
+    <header class="header">
+        <div class="header__search">
+            <form action="#">
+                <input type="text" placeholder="Поиск">
+            </form>
         </div>
-        <div class="slider-main">
-            <div class="slider-main-img">
-                <img src="image/slider_icon.png" width="400px" height="400px"/>
+        <div class="header__logo">
+            <img src="icons/Logotype.svg" alt="logo">
+        </div>
+    </header>
+    <main class="promo">
+        <div class="promo__menu">
+            <nav class="promo__menu-list">
+                <ul>
+                    <li><a class="promo__menu-item promo__menu-item_active" href="#">Фильмы</a></li>
+                    <li><a class="promo__menu-item" href="#">Сериалы</a></li>
+                    <li><a class="promo__menu-item" href="#">Мультфильмы</a></li>
+                    <li><a class="promo__menu-item" href="#">Клипы</a></li>
+                    <li><a class="promo__menu-item" href="#">Трейлеры</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="promo__content">
+            <div class="promo__bg">
+                <div class="promo__genre">КОМЕДИЯ</div>
+                <div class="promo__title">МАРСИАНИН</div>
+                <div class="promo__descr">ИСТОРИЯ ЧЕЛОВЕКА, ВЫЖИВШЕГО НА ЧУЖОЙ ПЛАНЕТЕ В ОДИНОЧКУ</div>
+                <div class="promo__ratings">
+                    <span>IMDb: 8.0</span>
+                    <span>Кинопоиск: 7.7</span>
+                </div>
             </div>
-            <div class="slider-main-description">
-                <h1>Introduccing</h1>
-                <h2>Something hot......</h2>
-                <button>Try demo</button>
+            <div class="promo__interactive">
+                <div>
+                    <div class="promo__interactive-title">ПРОСМОТРЕННЫЕ ФИЛЬМЫ</div>
+                    <ul class="promo__interactive-list">
+                        <li class="promo__interactive-item">ЛОГАН
+                            <div class="delete"></div>
+                        </li>
+                        <li class="promo__interactive-item">ЛИГА СПРАВЕДЛИВОСТИ
+                            <div class="delete"></div>
+                        </li>
+                        <li class="promo__interactive-item">ЛА-ЛА ЛЭНД
+                            <div class="delete"></div>
+                        </li>
+                        <li class="promo__interactive-item">ОДЕРЖИМОСТЬ
+                            <div class="delete"></div>
+                        </li>
+                        <li class="promo__interactive-item">СКОТТ ПИЛИГРИМ ПРОТИВ...
+                            <div class="delete"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="add">
+                        <div class="promo__interactive-title">ДОБАВИТЬ НОВЫЙ ФИЛЬМ</div>
+                        <span>Введите название фильма</span>
+                        <input class="adding__input" type="text" placeholder="Что уже посмотрено...?">
+                        <span>Сделать его любимым?</span>
+                        <input type="checkbox">
+                        <span class="yes">Да!</span>
+                        <button>Подтвердить</button>
+                    </form>
+                </div>
             </div>
         </div>
-        <div class="right-slider">
-            <a href=""><img src="image/slider_button_right.png"/></a>
+        <div class="promo__adv">
+            <div class="promo__adv-title">Реклама от спонсоров</div>
+            <img src="img/content_1.jpg" alt="some picture">
+            <img src="img/content_2.jpg" alt="some picture">
+            <img src="img/content_3.png" alt="some picture">
         </div>
-        </div>
-    </div>
-    <div class="main-content">
-        <div class="main-content-0">
-            <img src="image/main_content_0.png">
-            <p>Responsive Websites</p>
-        </div>
-        <div class="main-content-1">
-            <img src="image/main_content_1.png">
-            <p>e Commerece Websites</p>
-        </div>
-        <div class="main-content-2">
-            <img src="image/main_content_2.png">
-            <p>Daily blog websites</p>
-        </div>
-        <div class="main-content-3">
-            <img src="image/main_content_3.png">
-            <p>Search based websites</p>
-        </div>
-    </div>
-    <div class="main-content-description-1">
-        <img src="#">
-        <h3>Lorem Ipsum is simply dummy text</h3>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-            It has survived not only five centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. </p>
-        <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
-            and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem 
-            Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been 
-            the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of 
-            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also 
-            the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s 
-            with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop 
-            publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    </div>
-    <div class="why-my">
-        <div class="why-my-photo">
-            <img src="#"/>
-        </div>
-        <div class="why-my-description">
-            <h3>Why choose us?</h3>
-            <ul>
-                <li><img src="#">Lorem Ipsum is simply dummy text of the printing and typesetting</li>
-                <li><img src="#">Lorem Ipsum has been the industry's standard dummy text ever</li>
-                <li><img src="#">When an unknown printer took a galley of type and scrambled</li>
-                <li><img src="#">It has survived not only five centuries, but also the leap into electronic </li>
-                <li><img src="#">It was popularised in the 1960s with the release of Letraset sheets containing</li>
-                <li><img src="#">More recently with desktop publishing software like Aldus PageMaker </li>
-            </ul>
-        </div>
-    </div>
-    <div class="forms">
-        <div class="login">
-            <p>Member login</p>
-            <input value="User name">
-            <input value="Password">
-            <button>Log me in.</button>
-        </div>
-        <div class="subscribe">
-            <p>Subscribe to our weekly newsletter</p>
-            <input value="Email address">
-            <button>Subscribe</button>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="footer-0">
-            <p>About us</p>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Why us</a></li>
-                <li><a href="#">Customer stories</a></li>
-                <li><a href="#">Press Resources</a></li>
-                <li><a href="#">Press Releases</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-        </div>
-        <div class="footer-1">
-            <p>About us</p>
-            <ul>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Why us</a></li>
-                <li><a href="#">Customer stories</a></li>
-                <li><a href="#">Press Resources</a></li>
-                <li><a href="#">Press Releases</a></li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-        </div>
-        <div class="footer-2">
-            <div>
-                <p>Testimoanials</p>
-                <img src="#">
-                <img src="#"/>
-            </div>
-            <p>Lorem Ipsum is simply dummy text of the printing and 
-                typesetting industry. Lorem Ipsum has been the industr
-                standard dummy text ever since the 1500s, 
-                when an unknown printer took a</p>
-            <span>Autor</span>
-        </div>
-        <div class="footer-3">
-            <a href="#">Leo/-</a>
-            <p>© cssauthor.com</p>
-        </div>
-    </div> -->
-    <div class="box" id="box"></div>
-		<button>1</button>
-		<button>2</button>
-		<button>3</button>
-		<button>4</button>
-		<button>5</button>
+    </main>
 
-		<div class="circle"></div>
-		<div class="circle"></div>
-		<div class="circle"></div>
-
-		<div class="wrapper">
-			<div class="heart"></div>
-			<div class="heart"></div>
-            <div class="heart"></div>
-            
-		</div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
-  
